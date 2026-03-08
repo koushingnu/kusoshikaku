@@ -1,0 +1,27 @@
+[
+  {
+    "id": "dam-meister",
+    "name": "ダムマイスター",
+    "description": "ダムの魅力を伝える専門家"
+  },
+  {
+    "id": "onsen-sommelier",
+    "name": "温泉ソムリエ",
+    "description": "温泉の成分や効能を極める"
+  },
+  {
+    "id": "night-view-connoisseur",
+    "name": "夜景鑑賞士",
+    "description": "夜景の美しさを評価・解説"
+  },
+  {
+    "id": "cat-certification",
+    "name": "ねこ検定",
+    "description": "猫の生態、歴史、文化を学ぶ"
+  },
+  {
+    "id": "sake-master",
+    "name": "日本酒マイスター",
+    "description": "日本酒の知識を極める"
+  }
+]
