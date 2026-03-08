@@ -23,5 +23,10 @@
     "id": "sake-master",
     "name": "日本酒マイスター",
     "description": "日本酒の知識を極める"
+  },
+  {
+    "id": "hiyoko-meister",
+    "name": "ひよこ鑑定士",
+    "description": "ひよこの鑑定士"
   }
 ]
