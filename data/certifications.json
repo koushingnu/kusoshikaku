@@ -10,5 +10,17 @@
     "name": "サンタマイスター",
     "description": "サンタの魅力を伝える専門家",
     "image": "/contents/santa.png"
+  },
+  {
+    "id": "ramen-kentei",
+    "name": "ラーメン検定",
+    "description": "ラーメンの知識を極める",
+    "image": "/contents/ramen.png"
+  },
+  {
+    "id": "kitchen-specialist",
+    "name": "キッチンスペシャリスト",
+    "description": "キッチン設計の専門家",
+    "image": "/contents/kitchen.png"
   }
 ]
