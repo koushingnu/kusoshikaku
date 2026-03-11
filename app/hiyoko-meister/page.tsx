@@ -1,22 +1,27 @@
+import CertificationLayout from "@/components/CertificationLayout";
+
 export default function HiyokoMeisterPage() {
   return (
-    <main className="min-h-screen bg-white p-8">
-      <div className="max-w-4xl mx-auto">
-        <a href="/" className="text-blue-600 hover:underline mb-4 inline-block">
-          ← トップに戻る
-        </a>
-        
-        <h1 className="text-5xl font-black mb-4">ひよこ鑑定士</h1>
-        <p className="text-xl text-gray-600 mb-8">
-          ひよこの鑑定士
+    <CertificationLayout certificationName="ひよこ鑑定士">
+      {/* ここから独自コンテンツ */}
+      <div className="space-y-6">
+        <p className="text-lg text-gray-700 leading-relaxed">
+          ひよこ鑑定士は、生まれたばかりのひよこの性別を見分ける専門家です。
         </p>
-
-        <div className="border-2 border-black p-8">
-          <p className="text-lg">
-            ここにひよこ鑑定士のコンテンツを追加していきます。
-          </p>
+        
+        <div className="bg-gray-100 p-6 rounded-lg">
+          <h3 className="text-xl font-bold mb-3">主な業務</h3>
+          <ul className="list-disc list-inside space-y-2 text-gray-700">
+            <li>ひよこの性別鑑定</li>
+            <li>養鶏場での品質管理</li>
+            <li>鑑定技術の指導</li>
+          </ul>
         </div>
+
+        <p className="text-gray-600 text-center mt-8">
+          ここに独自のコンテンツを追加できます
+        </p>
       </div>
-    </main>
+    </CertificationLayout>
   );
 }

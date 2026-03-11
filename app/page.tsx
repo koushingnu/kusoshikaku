@@ -3,17 +3,63 @@
 import certifications from "@/data/certifications.json";
 import { useState } from "react";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 export default function Home() {
   const [showPiyo, setShowPiyo] = useState(false);
+  const [isTransitioning, setIsTransitioning] = useState(false);
+  const router = useRouter();
 
   const handleChickClick = () => {
     setShowPiyo(true);
     setTimeout(() => setShowPiyo(false), 4000);
   };
 
+  const handleCardClick = (e: React.MouseEvent, certId: string) => {
+    e.preventDefault();
+    setIsTransitioning(true);
+    
+    setTimeout(() => {
+      router.push(`/${certId}`);
+    }, 1000);
+  };
+
   return (
     <main className="min-h-screen bg-[#1e1e8f] relative overflow-hidden">
+      {/* ページ遷移アニメーション */}
+      {isTransitioning && (
+        <div className="fixed inset-0 z-[9999] pointer-events-none">
+          {/* 背景の拡大円 */}
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="w-0 h-0 bg-yellow-400 rounded-full animate-expand-circle"></div>
+          </div>
+          
+          {/* 回転する「クソ資格検定」文字 */}
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-black text-[#1e1e8f] animate-spin-zoom whitespace-nowrap px-4">
+              クソ資格検定
+            </div>
+          </div>
+
+          {/* キラキラエフェクト */}
+          <div className="absolute inset-0">
+            {[...Array(20)].map((_, i) => (
+              <div
+                key={i}
+                className="absolute text-2xl sm:text-3xl md:text-4xl animate-sparkle"
+                style={{
+                  left: `${Math.random() * 100}%`,
+                  top: `${Math.random() * 100}%`,
+                  animationDelay: `${Math.random() * 0.5}s`,
+                }}
+              >
+                ✨
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
       {/* ピヨピヨアニメーション */}
       {showPiyo && (
         <div className="fixed top-1/2 left-0 w-screen z-50 pointer-events-none overflow-visible">
@@ -81,7 +127,8 @@ export default function Home() {
               <a
                 key={cert.id}
                 href={`/${cert.id}`}
-                className="hover:scale-105 transition-transform block"
+                onClick={(e) => handleCardClick(e, cert.id)}
+                className="hover:scale-105 transition-transform block cursor-pointer"
               >
                 {/* 画像ボックス（正方形） */}
                 <div className="aspect-square bg-gray-200 border-2 sm:border-3 md:border-4 border-gray-300 rounded-md sm:rounded-lg overflow-hidden mb-2 sm:mb-3 relative">
