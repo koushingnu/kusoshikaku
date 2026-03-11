@@ -8,9 +8,9 @@ export default function HiyokoMeisterPage() {
         <p className="text-lg text-gray-700 leading-relaxed">
           ひよこ鑑定士は、生まれたばかりのひよこの性別を見分ける専門家です。
         </p>
-        
+
         <div className="bg-gray-100 p-6 rounded-lg">
-          <h3 className="text-xl font-bold mb-3">主な業務</h3>
+          <h3 className="text-xl font-bold mb-3 text-black">主な業務</h3>
           <ul className="list-disc list-inside space-y-2 text-gray-700">
             <li>ひよこの性別鑑定</li>
             <li>養鶏場での品質管理</li>
