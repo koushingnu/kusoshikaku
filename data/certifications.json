@@ -3,24 +3,28 @@
     "id": "hiyoko-meister",
     "name": "ひよこ鑑定士",
     "description": "ひよこの鑑定士",
-    "image": "/contents/hiyoko.png"
+    "image": "/contents/hiyoko.png",
+    "coloredPart": "ひよこ"
   },
   {
     "id": "santa-meister",
     "name": "サンタマイスター",
     "description": "サンタの魅力を伝える専門家",
-    "image": "/contents/santa.png"
+    "image": "/contents/santa.png",
+    "coloredPart": "サンタ"
   },
   {
     "id": "ramen-kentei",
     "name": "ラーメン検定",
     "description": "ラーメンの知識を極める",
-    "image": "/contents/ramen.png"
+    "image": "/contents/ramen.png",
+    "coloredPart": "ラーメン"
   },
   {
     "id": "kitchen-specialist",
     "name": "キッチンスペシャリスト",
     "description": "キッチン設計の専門家",
-    "image": "/contents/kitchen.png"
+    "image": "/contents/kitchen.png",
+    "coloredPart": "キッチン"
   }
 ]

@@ -101,12 +101,18 @@ export default function Home() {
                 
                 {/* タイトル（カード下） */}
                 <h3 className="font-black text-base sm:text-xl md:text-2xl lg:text-3xl text-center leading-tight">
-                  <span className={index % 2 === 0 ? "text-red-600" : "text-yellow-500"}>
-                    {cert.name.split('').slice(0, -3).join('')}
-                  </span>
-                  <span className="text-black">
-                    {cert.name.slice(-3)}
-                  </span>
+                  {cert.coloredPart ? (
+                    <>
+                      <span className={index % 2 === 0 ? "text-red-600" : "text-yellow-500"}>
+                        {cert.coloredPart}
+                      </span>
+                      <span className="text-black">
+                        {cert.name.replace(cert.coloredPart, '')}
+                      </span>
+                    </>
+                  ) : (
+                    <span className="text-black">{cert.name}</span>
+                  )}
                 </h3>
               </a>
             ))}
