@@ -2,11 +2,13 @@
   {
     "id": "hiyoko-meister",
     "name": "ひよこ鑑定士",
-    "description": "ひよこの鑑定士"
+    "description": "ひよこの鑑定士",
+    "image": "/contents/hiyoko.png"
   },
   {
     "id": "santa-meister",
     "name": "サンタマイスター",
-    "description": "サンタの魅力を伝える専門家"
+    "description": "サンタの魅力を伝える専門家",
+    "image": "/contents/santa.png"
   }
 ]

@@ -2,8 +2,42 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'Reggae One';
+  src: url('/fonts/ReggaeOne-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 @layer base {
   body {
-    @apply bg-white text-gray-900 antialiased;
+    @apply bg-[#1e1e8f] text-white antialiased;
+    font-family: 'Reggae One', sans-serif;
+  }
+}
+
+@layer utilities {
+  .title-skew {
+    transform: skewY(-3deg);
+  }
+  
+  .bg-texture {
+    background-image: url('/bg-texture.png');
+    background-repeat: repeat;
+    background-size: 400px 400px;
+  }
+  
+  @keyframes scroll {
+    0% {
+      transform: translateX(100vw);
+    }
+    100% {
+      transform: translateX(-150vw);
+    }
+  }
+  
+  .animate-scroll {
+    animation: scroll 4s linear;
   }
 }
