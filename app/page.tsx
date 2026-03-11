@@ -32,16 +32,16 @@ export default function Home() {
         🐣
       </div>
 
-      {/* 吹き出しとひよこ（画面右上端） */}
-      <div className="fixed top-2 right-2 sm:top-4 sm:right-4 md:top-8 md:right-8 z-20">
-        <div className="relative inline-block pb-8 pr-8 sm:pb-10 sm:pr-10 md:pb-12 md:pr-12">
-          <div className="bg-white text-blue-900 px-2 py-1.5 sm:px-3 sm:py-2 rounded-xl sm:rounded-2xl border-2 sm:border-4 border-white text-[10px] sm:text-xs font-bold shadow-lg max-w-[120px] sm:max-w-[140px] md:max-w-[160px] relative">
+      {/* 吹き出しとひよこ（画面右上端） - スマホでは非表示 */}
+      <div className="hidden sm:block fixed top-4 right-4 md:top-8 md:right-8 z-20">
+        <div className="relative inline-block pb-10 pr-10 md:pb-12 md:pr-12">
+          <div className="bg-white text-blue-900 px-3 py-2 rounded-2xl border-4 border-white text-xs font-bold shadow-lg max-w-[140px] md:max-w-[160px] relative">
             将来の選択肢の一つに<br />なれば嬉しいピヨ...
             {/* 吹き出しの尻尾（右下に向かう） */}
-            <div className="absolute bottom-1 sm:bottom-2 right-0 w-0 h-0 border-l-[12px] sm:border-l-[15px] md:border-l-[18px] border-l-white border-t-[12px] sm:border-t-[15px] md:border-t-[18px] border-t-transparent translate-x-1/2 translate-y-1/2"></div>
+            <div className="absolute bottom-2 right-0 w-0 h-0 border-l-[15px] md:border-l-[18px] border-l-white border-t-[15px] md:border-t-[18px] border-t-transparent translate-x-1/2 translate-y-1/2"></div>
           </div>
           {/* ひよこ（吹き出しの右下） */}
-          <div className="absolute bottom-0 right-0 text-3xl sm:text-4xl md:text-5xl">
+          <div className="absolute bottom-0 right-0 text-4xl md:text-5xl">
             🐣
           </div>
         </div>

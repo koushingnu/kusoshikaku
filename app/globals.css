@@ -25,7 +25,20 @@
   .bg-texture {
     background-image: url('/bg-texture.png');
     background-repeat: repeat;
-    background-size: 400px 400px;
+    background-size: 300px 300px;
+    background-position: center;
+  }
+  
+  @media (min-width: 640px) {
+    .bg-texture {
+      background-size: 350px 350px;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .bg-texture {
+      background-size: 400px 400px;
+    }
   }
   
   @keyframes scroll {
